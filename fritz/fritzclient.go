@@ -8,10 +8,10 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/bpicode/fritzctl/config"
-	"github.com/bpicode/fritzctl/httpread"
-	"github.com/bpicode/fritzctl/internal/errors"
-	"github.com/bpicode/fritzctl/logger"
+	"github.com/gotohr/fritzctl/config"
+	"github.com/gotohr/fritzctl/httpread"
+	"github.com/gotohr/fritzctl/internal/errors"
+	"github.com/gotohr/fritzctl/logger"
 )
 
 // Client encapsulates the FRITZ!Box interaction API.

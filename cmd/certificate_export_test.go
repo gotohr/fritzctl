@@ -5,7 +5,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/bpicode/fritzctl/config"
+	"github.com/gotohr/fritzctl/config"
 	"github.com/stretchr/testify/assert"
 )
 

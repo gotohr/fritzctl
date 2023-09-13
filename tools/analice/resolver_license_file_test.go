@@ -12,7 +12,7 @@ func TestResolve(t *testing.T) {
 	pkgs, err := scanner.scan(depScannerOptions{
 		envPermutations: [][]string{nil},
 		tests:           false,
-	}, "github.com/bpicode/fritzctl")
+	}, "github.com/gotohr/fritzctl")
 	assert.NoError(t, err)
 	assert.NotEmpty(t, pkgs)
 

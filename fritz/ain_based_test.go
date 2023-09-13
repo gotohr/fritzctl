@@ -9,7 +9,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/bpicode/fritzctl/mock"
+	"github.com/gotohr/fritzctl/mock"
 	"github.com/stretchr/testify/assert"
 )
 

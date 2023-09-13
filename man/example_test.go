@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/bpicode/fritzctl/man"
+	"github.com/gotohr/fritzctl/man"
 	"github.com/spf13/cobra"
 )
 

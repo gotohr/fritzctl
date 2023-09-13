@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/bpicode/fritzctl/internal/errors"
-	"github.com/bpicode/fritzctl/logger"
+	"github.com/gotohr/fritzctl/internal/errors"
+	"github.com/gotohr/fritzctl/logger"
 	"gopkg.in/yaml.v2"
 )
 

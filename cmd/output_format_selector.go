@@ -1,8 +1,8 @@
 package cmd
 
 import (
-	"github.com/bpicode/fritzctl/cmd/jsonapi"
-	"github.com/bpicode/fritzctl/fritz"
+	"github.com/gotohr/fritzctl/cmd/jsonapi"
+	"github.com/gotohr/fritzctl/fritz"
 	"github.com/spf13/cobra"
 )
 

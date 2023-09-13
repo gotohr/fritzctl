@@ -3,7 +3,7 @@ package manifest
 import (
 	"fmt"
 
-	"github.com/bpicode/fritzctl/internal/console"
+	"github.com/gotohr/fritzctl/internal/console"
 )
 
 type dryRunner struct {

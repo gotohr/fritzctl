@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/bpicode/fritzctl/config"
-	"github.com/bpicode/fritzctl/logger"
+	"github.com/gotohr/fritzctl/config"
+	"github.com/gotohr/fritzctl/logger"
 )
 
 // URL sets the target host of the FRITZ!Box. Note that for usual setups, the url https://fritz.box:443 works.

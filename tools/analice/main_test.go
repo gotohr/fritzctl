@@ -13,7 +13,7 @@ func Test_generate_notice(t *testing.T) {
 	var argsOrig []string
 	copy(argsOrig, os.Args)
 	defer func() { os.Args = argsOrig }()
-	os.Args = []string{"analice", "generate", "notice", "github.com/bpicode/fritzctl", "--tests=false"}
+	os.Args = []string{"analice", "generate", "notice", "github.com/gotohr/fritzctl", "--tests=false"}
 	assert.NotPanics(t, main)
 }
 
@@ -21,7 +21,7 @@ func Test_generate_copyright(t *testing.T) {
 	var argsOrig []string
 	copy(argsOrig, os.Args)
 	defer func() { os.Args = argsOrig }()
-	os.Args = []string{"analice", "generate", "copyright", "github.com/bpicode/fritzctl"}
+	os.Args = []string{"analice", "generate", "copyright", "github.com/gotohr/fritzctl"}
 	assert.NotPanics(t, main)
 }
 

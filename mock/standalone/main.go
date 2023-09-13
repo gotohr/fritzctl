@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 
-	"github.com/bpicode/fritzctl/mock"
+	"github.com/gotohr/fritzctl/mock"
 )
 
 func main() {

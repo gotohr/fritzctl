@@ -3,7 +3,7 @@ package cmd
 import (
 	"testing"
 
-	"github.com/bpicode/fritzctl/fritz"
+	"github.com/gotohr/fritzctl/fritz"
 	"github.com/stretchr/testify/assert"
 )
 

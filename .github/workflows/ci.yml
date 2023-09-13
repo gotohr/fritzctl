@@ -80,7 +80,7 @@ jobs:
        goweight
 
     - name: Notify Go Report Card
-      run: curl -XPOST https://goreportcard.com/checks -F 'repo=github.com/bpicode/fritzctl'
+      run: curl -XPOST https://goreportcard.com/checks -F 'repo=github.com/gotohr/fritzctl'
 
     - name: Upload code coverage
       run: bash <(curl -s https://codecov.io/bash)

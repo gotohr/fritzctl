@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/bpicode/fritzctl/logger"
+	"github.com/gotohr/fritzctl/logger"
 	"github.com/spf13/cobra"
 )
 

@@ -5,9 +5,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/bpicode/fritzctl/fritz"
-	"github.com/bpicode/fritzctl/internal/console"
-	"github.com/bpicode/fritzctl/internal/stringutils"
+	"github.com/gotohr/fritzctl/fritz"
+	"github.com/gotohr/fritzctl/internal/console"
+	"github.com/gotohr/fritzctl/internal/stringutils"
 	"github.com/spf13/cobra"
 )
 

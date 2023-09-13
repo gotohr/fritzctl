@@ -3,8 +3,8 @@ package cmd
 import (
 	"os"
 
-	"github.com/bpicode/fritzctl/fritz"
-	"github.com/bpicode/fritzctl/manifest"
+	"github.com/gotohr/fritzctl/fritz"
+	"github.com/gotohr/fritzctl/manifest"
 )
 
 func parseManifest(filename string) *manifest.Plan {

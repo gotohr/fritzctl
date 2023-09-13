@@ -1,8 +1,8 @@
 package fritz
 
 import (
-	"github.com/bpicode/fritzctl/httpread"
-	"github.com/bpicode/fritzctl/internal/errors"
+	"github.com/gotohr/fritzctl/httpread"
+	"github.com/gotohr/fritzctl/internal/errors"
 )
 
 // NewPhone creates a client for interaction with the FB phone sector.

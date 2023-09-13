@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"io"
 
-	"github.com/bpicode/fritzctl/internal/console"
+	"github.com/gotohr/fritzctl/internal/console"
 )
 
 // Print arbitrates between printable types.

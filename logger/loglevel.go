@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/bpicode/fritzctl/internal/errors"
+	"github.com/gotohr/fritzctl/internal/errors"
 )
 
 type printers struct {

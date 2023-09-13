@@ -4,7 +4,7 @@ import (
 	"os/user"
 	"path"
 
-	"github.com/bpicode/fritzctl/internal/errors"
+	"github.com/gotohr/fritzctl/internal/errors"
 )
 
 var (

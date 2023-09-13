@@ -3,11 +3,11 @@ package cmd
 import (
 	"os"
 
-	"github.com/bpicode/fritzctl/cmd/printer"
-	"github.com/bpicode/fritzctl/fritz"
-	"github.com/bpicode/fritzctl/internal/console"
-	"github.com/bpicode/fritzctl/internal/stringutils"
-	"github.com/bpicode/fritzctl/logger"
+	"github.com/gotohr/fritzctl/cmd/printer"
+	"github.com/gotohr/fritzctl/fritz"
+	"github.com/gotohr/fritzctl/internal/console"
+	"github.com/gotohr/fritzctl/internal/stringutils"
+	"github.com/gotohr/fritzctl/logger"
 	"github.com/spf13/cobra"
 )
 

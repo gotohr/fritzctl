@@ -7,7 +7,7 @@ import (
 	"os/user"
 	"path"
 
-	"github.com/bpicode/fritzctl/internal/console"
+	"github.com/gotohr/fritzctl/internal/console"
 	"gopkg.in/yaml.v2"
 )
 

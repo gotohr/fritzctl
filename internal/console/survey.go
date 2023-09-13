@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/bpicode/fritzctl/internal/errors"
 	"github.com/fatih/color"
+	"github.com/gotohr/fritzctl/internal/errors"
 	"golang.org/x/crypto/ssh/terminal"
 )
 

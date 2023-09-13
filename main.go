@@ -5,8 +5,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/bpicode/fritzctl/cmd"
-	"github.com/bpicode/fritzctl/logger"
+	"github.com/gotohr/fritzctl/cmd"
+	"github.com/gotohr/fritzctl/logger"
 )
 
 var (

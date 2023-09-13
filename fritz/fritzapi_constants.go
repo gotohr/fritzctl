@@ -5,8 +5,8 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/bpicode/fritzctl/config"
-	"github.com/bpicode/fritzctl/internal/stringutils"
+	"github.com/gotohr/fritzctl/config"
+	"github.com/gotohr/fritzctl/internal/stringutils"
 )
 
 const (

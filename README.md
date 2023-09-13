@@ -15,7 +15,7 @@ Finally, I wish to express my deep gratitude to everyone who contributed. Thanks
 
 ![Demo usage](/images/fritzctl_demo.gif?raw=true "Demo usage")
 
-## About [![Wiki](https://img.shields.io/badge/wiki-home-brightgreen.svg)](https://github.com/bpicode/fritzctl/wiki)
+## About [![Wiki](https://img.shields.io/badge/wiki-home-brightgreen.svg)](https://github.com/gotohr/fritzctl/wiki)
 
 `fritzctl` is a command line client for the AVM FRITZ!Box primarily focused on the
 [AVM Home Automation HTTP Interface](https://avm.de/fileadmin/user_upload/Global/Service/Schnittstellen/AHA-HTTP-Interface.pdf).
@@ -28,17 +28,17 @@ It should work out-of-the-box with most FRITZ!Boxes running a recent FRITZ!OS ve
 | FRITZ!Box 6490 Cable | 06.63, 06.83, 06.84, 06.87, 07.00 |
 | FRITZ!Box 7490 | 06.83, 06.90, 06.93 |
 
-## CI [![Actions](https://github.com/bpicode/fritzctl/workflows/Continuous%20Integration/badge.svg)](https://github.com/bpicode/fritzctl/actions) [![AppVeyor](https://ci.appveyor.com/api/projects/status/k7qqx91w6mja3u7h?svg=true&passingText=Windows%20-%20OK&failingText=Windows%20-%20failed&pendingText=Windows%20-%20pending)](https://ci.appveyor.com/project/bpicode/fritzctl)
+## CI [![Actions](https://github.com/gotohr/fritzctl/workflows/Continuous%20Integration/badge.svg)](https://github.com/gotohr/fritzctl/actions) [![AppVeyor](https://ci.appveyor.com/api/projects/status/k7qqx91w6mja3u7h?svg=true&passingText=Windows%20-%20OK&failingText=Windows%20-%20failed&pendingText=Windows%20-%20pending)](https://ci.appveyor.com/project/gotohr/fritzctl)
 
-## Code [![Go Report Card](https://goreportcard.com/badge/github.com/bpicode/fritzctl)](https://goreportcard.com/report/github.com/bpicode/fritzctl) [![codecov](https://codecov.io/gh/bpicode/fritzctl/branch/master/graph/badge.svg)](https://codecov.io/gh/bpicode/fritzctl) [![codebeat badge](https://codebeat.co/badges/605cf539-21dd-4a60-a892-e0d6da3021fe)](https://codebeat.co/projects/github-com-bpicode-fritzctl) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/356d5568f61e40c3ad430786f766231e)](https://www.codacy.com/app/bjoern.pirnay/fritzctl?utm_source=github.com&utm_medium=referral&utm_content=bpicode/fritzctl&utm_campaign=badger) [![BCH compliance](https://bettercodehub.com/edge/badge/bpicode/fritzctl?branch=master)](https://bettercodehub.com/results/bpicode/fritzctl) [![Maintainability](https://api.codeclimate.com/v1/badges/0dbf66a5ad3c5e059656/maintainability)](https://codeclimate.com/github/bpicode/fritzctl/maintainability) [![CodeFactor](https://www.codefactor.io/repository/github/bpicode/fritzctl/badge)](https://www.codefactor.io/repository/github/bpicode/fritzctl)
+## Code [![Go Report Card](https://goreportcard.com/badge/github.com/gotohr/fritzctl)](https://goreportcard.com/report/github.com/gotohr/fritzctl) [![codecov](https://codecov.io/gh/gotohr/fritzctl/branch/master/graph/badge.svg)](https://codecov.io/gh/gotohr/fritzctl) [![codebeat badge](https://codebeat.co/badges/605cf539-21dd-4a60-a892-e0d6da3021fe)](https://codebeat.co/projects/github-com-gotohr-fritzctl) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/356d5568f61e40c3ad430786f766231e)](https://www.codacy.com/app/bjoern.pirnay/fritzctl?utm_source=github.com&utm_medium=referral&utm_content=gotohr/fritzctl&utm_campaign=badger) [![BCH compliance](https://bettercodehub.com/edge/badge/gotohr/fritzctl?branch=master)](https://bettercodehub.com/results/gotohr/fritzctl) [![Maintainability](https://api.codeclimate.com/v1/badges/0dbf66a5ad3c5e059656/maintainability)](https://codeclimate.com/github/gotohr/fritzctl/maintainability) [![CodeFactor](https://www.codefactor.io/repository/github/gotohr/fritzctl/badge)](https://www.codefactor.io/repository/github/gotohr/fritzctl)
 
 ## Releases
-*   [![release](https://img.shields.io/github/release/bpicode/fritzctl.svg)](https://github.com/bpicode/fritzctl/releases/latest) [![downloads](https://img.shields.io/github/downloads/bpicode/fritzctl/total.svg)](https://github.com/bpicode/fritzctl/releases/latest) github release
-*   [![Download .deb](https://api.bintray.com/packages/bpicode/fritzctl_deb/fritzctl/images/download.svg)](https://bintray.com/bpicode/fritzctl_deb/fritzctl/_latestVersion)
+*   [![release](https://img.shields.io/github/release/gotohr/fritzctl.svg)](https://github.com/gotohr/fritzctl/releases/latest) [![downloads](https://img.shields.io/github/downloads/gotohr/fritzctl/total.svg)](https://github.com/gotohr/fritzctl/releases/latest) github release
+*   [![Download .deb](https://api.bintray.com/packages/gotohr/fritzctl_deb/fritzctl/images/download.svg)](https://bintray.com/gotohr/fritzctl_deb/fritzctl/_latestVersion)
     .deb packages
-*   [![Download .rpm](https://api.bintray.com/packages/bpicode/fritzctl_rpm/fritzctl/images/download.svg)](https://bintray.com/bpicode/fritzctl_rpm/fritzctl/_latestVersion)
+*   [![Download .rpm](https://api.bintray.com/packages/gotohr/fritzctl_rpm/fritzctl/images/download.svg)](https://bintray.com/gotohr/fritzctl_rpm/fritzctl/_latestVersion)
     .rpm packages 
-*   [![Download](https://api.bintray.com/packages/bpicode/fritzctl_win/fritzctl/images/download.svg)](https://bintray.com/bpicode/fritzctl_win/fritzctl/_latestVersion)
+*   [![Download](https://api.bintray.com/packages/gotohr/fritzctl_win/fritzctl/images/download.svg)](https://bintray.com/gotohr/fritzctl_win/fritzctl/_latestVersion)
     .zip windows
 
 ## Install
@@ -48,13 +48,13 @@ It should work out-of-the-box with most FRITZ!Boxes running a recent FRITZ!OS ve
 Add the repository (replace `stretch` by `buster`, `jessie`, `wheezy` or `sid` depending on your distribution)
 
 ```sh
-echo "deb https://dl.bintray.com/bpicode/fritzctl_deb stretch main" | sudo tee -a /etc/apt/sources.list
+echo "deb https://dl.bintray.com/gotohr/fritzctl_deb stretch main" | sudo tee -a /etc/apt/sources.list
 ```
 
 and its signing key
 
 ```sh
-wget -qO - https://api.bintray.com/users/bpicode/keys/gpg/public.key | sudo apt-key add -
+wget -qO - https://api.bintray.com/users/gotohr/keys/gpg/public.key | sudo apt-key add -
 ```
 
 The fingerprint of the repository key `3072D/35E71039` is
@@ -73,7 +73,7 @@ Upgrades for `fritzctl` will now be detected by `apt update` and can be installe
 Add the repository
 
 ```sh
-wget https://bintray.com/bpicode/fritzctl_rpm/rpm -O bintray-bpicode-fritzctl_rpm.repo && sudo zypper ar -f bintray-bpicode-fritzctl_rpm.repo && rm bintray-bpicode-fritzctl_rpm.repo
+wget https://bintray.com/gotohr/fritzctl_rpm/rpm -O bintray-gotohr-fritzctl_rpm.repo && sudo zypper ar -f bintray-gotohr-fritzctl_rpm.repo && rm bintray-gotohr-fritzctl_rpm.repo
 ```
 
 Update your local repository data and install
@@ -88,28 +88,28 @@ sudo zypper in fritzctl
 Install using homebrew
 
 ```sh
-brew install bpicode/tap/fritzctl
+brew install gotohr/tap/fritzctl
 ```
 
 ### Windows
 
-Windows binaries can found in the [windows directory](https://dl.bintray.com/bpicode/fritzctl_win/).
+Windows binaries can found in the [windows directory](https://dl.bintray.com/gotohr/fritzctl_win/).
 
 ### From Source
 
 `fritzctl` is go-gettable. Set up a go environment guided by [How To Write Go Code](http://golang.org/doc/code.html)
 and then run
 ```sh
-go get github.com/bpicode/fritzctl
+go get github.com/gotohr/fritzctl
 ```
 
-## As Library [![GoDoc](https://godoc.org/github.com/bpicode/fritzctl?status.svg)](https://godoc.org/github.com/bpicode/fritzctl)
+## As Library [![GoDoc](https://godoc.org/github.com/gotohr/fritzctl?status.svg)](https://godoc.org/github.com/gotohr/fritzctl)
 
 Example:
 ```go
 package main
 
-import "github.com/bpicode/fritzctl/fritz"
+import "github.com/gotohr/fritzctl/fritz"
 
 func main() { 
 	h := fritz.NewHomeAuto(
@@ -140,14 +140,14 @@ docker build -t fritzctl/build docker/build \
 ```
 Building the binaries is done in the container phase:
 ```sh
-docker run --rm -v fritzctl_build_folder:/root/go/src/github.com/bpicode/fritzctl/build fritzctl/build
+docker run --rm -v fritzctl_build_folder:/root/go/src/github.com/gotohr/fritzctl/build fritzctl/build
 ```
 The above command will create a docker volume `fritzctl_build_folder` containing the binaries. Those can be checked for
 equality with the distributed ones.
 
-## License [![License](https://img.shields.io/github/license/bpicode/fritzctl.svg)](https://opensource.org/licenses/MIT) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fbpicode%2Ffritzctl.svg?type=shield)](https://app.fossa.com/reports/aee04b1a-57e1-4ddc-aee9-f6beaa3fe2e6)
+## License [![License](https://img.shields.io/github/license/gotohr/fritzctl.svg)](https://opensource.org/licenses/MIT) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgotohr%2Ffritzctl.svg?type=shield)](https://app.fossa.com/reports/aee04b1a-57e1-4ddc-aee9-f6beaa3fe2e6)
 
-This project is licensed under the terms of the MIT license, see [LICENSE](https://github.com/bpicode/fritzctl/blob/master/LICENSE).
+This project is licensed under the terms of the MIT license, see [LICENSE](https://github.com/gotohr/fritzctl/blob/master/LICENSE).
 
 The `fritzctl` image is licensed under the Creative Commons 3.0 Attributions license. It is build upon the following work:
 

@@ -5,8 +5,8 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/bpicode/fritzctl/config"
-	"github.com/bpicode/fritzctl/mock"
+	"github.com/gotohr/fritzctl/config"
+	"github.com/gotohr/fritzctl/mock"
 	"github.com/stretchr/testify/assert"
 )
 

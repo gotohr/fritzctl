@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/bpicode/fritzctl/internal/console"
+	"github.com/gotohr/fritzctl/internal/console"
 	"github.com/stretchr/testify/assert"
 )
 

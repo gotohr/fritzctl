@@ -11,9 +11,9 @@ import (
 	"io"
 	"os"
 
-	"github.com/bpicode/fritzctl/config"
-	"github.com/bpicode/fritzctl/internal/console"
-	"github.com/bpicode/fritzctl/internal/stringutils"
+	"github.com/gotohr/fritzctl/config"
+	"github.com/gotohr/fritzctl/internal/console"
+	"github.com/gotohr/fritzctl/internal/stringutils"
 	"github.com/spf13/cobra"
 )
 

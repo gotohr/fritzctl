@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/bpicode/fritzctl/manifest"
+	"github.com/gotohr/fritzctl/manifest"
 	"github.com/spf13/cobra"
 )
 

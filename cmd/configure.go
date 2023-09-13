@@ -4,7 +4,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/bpicode/fritzctl/config"
+	"github.com/gotohr/fritzctl/config"
 	"github.com/spf13/cobra"
 )
 

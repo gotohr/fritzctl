@@ -1,7 +1,7 @@
 package mock_test
 
 import (
-	"github.com/bpicode/fritzctl/mock"
+	"github.com/gotohr/fritzctl/mock"
 )
 
 // Start a new mock server.

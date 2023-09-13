@@ -1,15 +1,28 @@
-module github.com/bpicode/fritzctl
+module github.com/gotohr/fritzctl
+
+go 1.21
 
 require (
-	github.com/cpuguy83/go-md2man/v2 v2.0.0
-	github.com/fatih/color v1.10.0
+	github.com/cpuguy83/go-md2man/v2 v2.0.2
+	github.com/fatih/color v1.15.0
 	github.com/julienschmidt/httprouter v1.3.0
-	github.com/spf13/cobra v0.0.6-0.20191202130430-b04b5bfc50cb
+	github.com/spf13/cobra v1.7.0
 	github.com/spf13/pflag v1.0.5
-	github.com/stretchr/testify v1.6.1
-	golang.org/x/crypto v0.0.0-20191206172530-e9b2fee46413
-	golang.org/x/tools v0.0.0-20191213221258-04c2e8eff935
+	github.com/stretchr/testify v1.8.4
+	golang.org/x/crypto v0.13.0
+	golang.org/x/tools v0.13.0
 	gopkg.in/yaml.v2 v2.4.0
 )
 
-go 1.13
+require (
+	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/inconshreveable/mousetrap v1.1.0 // indirect
+	github.com/mattn/go-colorable v0.1.13 // indirect
+	github.com/mattn/go-isatty v0.0.17 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
+	github.com/russross/blackfriday/v2 v2.1.0 // indirect
+	golang.org/x/mod v0.12.0 // indirect
+	golang.org/x/sys v0.12.0 // indirect
+	golang.org/x/term v0.12.0 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
+)

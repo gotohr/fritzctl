@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/bpicode/fritzctl/internal/errors"
+	"github.com/gotohr/fritzctl/internal/errors"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -49,7 +49,7 @@ func TestDetermineExitCode(t *testing.T) {
 	assert.Equal(t, 1, determineExitCode("an error"))
 }
 
-//// TestStack exercises the stack traversal.
+// // TestStack exercises the stack traversal.
 func TestStack(t *testing.T) {
 	assert.Len(t, stack(nil), 0)
 	assert.Equal(t, []string{"error"}, stack("error"))

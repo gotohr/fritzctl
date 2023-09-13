@@ -5,9 +5,9 @@ import (
 	"net/url"
 	"os/user"
 
-	"github.com/bpicode/fritzctl/config"
-	"github.com/bpicode/fritzctl/fritz"
-	"github.com/bpicode/fritzctl/logger"
+	"github.com/gotohr/fritzctl/config"
+	"github.com/gotohr/fritzctl/fritz"
+	"github.com/gotohr/fritzctl/logger"
 )
 
 var defaultConfigPlaces = []config.Place{

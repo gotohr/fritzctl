@@ -2,9 +2,9 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/bpicode/fritzctl/config"
-	"github.com/bpicode/fritzctl/internal/console"
 	"github.com/fatih/color"
+	"github.com/gotohr/fritzctl/config"
+	"github.com/gotohr/fritzctl/internal/console"
 	"github.com/spf13/cobra"
 )
 
@@ -70,8 +70,8 @@ func init() {
 func about(_ *cobra.Command, _ []string) error {
 	fmt.Println(logos[!color.NoColor])
 	fmt.Println(console.Cyan("fritzctl:      "), "version", config.Version)
-	fmt.Println(console.Cyan("Homepage:      "), "https://github.com/bpicode/fritzctl")
-	fmt.Println(console.Cyan("Issue tracking:"), "https://github.com/bpicode/fritzctl/issues")
-	fmt.Println(console.Cyan("License:       "), "https://github.com/bpicode/fritzctl/blob/master/LICENSE")
+	fmt.Println(console.Cyan("Homepage:      "), "https://github.com/gotohr/fritzctl")
+	fmt.Println(console.Cyan("Issue tracking:"), "https://github.com/gotohr/fritzctl/issues")
+	fmt.Println(console.Cyan("License:       "), "https://github.com/gotohr/fritzctl/blob/master/LICENSE")
 	return nil
 }

@@ -11,11 +11,11 @@ RUN apt-get update \
 RUN wget --quiet https://storage.googleapis.com/golang/go${go_version}.linux-amd64.tar.gz
 RUN tar -xf go${go_version}.linux-amd64.tar.gz
 RUN mv go /usr/local
-RUN mkdir -p /root/go/src/github.com/bpicode
+RUN mkdir -p /root/go/src/github.com/gotohr
 
-WORKDIR /root/go/src/github.com/bpicode
-RUN git clone https://github.com/bpicode/fritzctl.git
-WORKDIR /root/go/src/github.com/bpicode/fritzctl
+WORKDIR /root/go/src/github.com/gotohr
+RUN git clone https://github.com/gotohr/fritzctl.git
+WORKDIR /root/go/src/github.com/gotohr/fritzctl
 RUN git checkout ${fritzctl_revision}
 RUN mkdir build
 

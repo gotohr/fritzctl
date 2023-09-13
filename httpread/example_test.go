@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/bpicode/fritzctl/httpread"
+	"github.com/gotohr/fritzctl/httpread"
 )
 
 // JSON reads marshals the body of a http.Response to a struct.

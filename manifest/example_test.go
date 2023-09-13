@@ -3,8 +3,8 @@ package manifest_test
 import (
 	"net/url"
 
-	"github.com/bpicode/fritzctl/fritz"
-	"github.com/bpicode/fritzctl/manifest"
+	"github.com/gotohr/fritzctl/fritz"
+	"github.com/gotohr/fritzctl/manifest"
 )
 
 // Using an Applier, one can change the config of devices in one run.

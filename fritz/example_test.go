@@ -3,7 +3,7 @@ package fritz_test
 import (
 	"net/url"
 
-	"github.com/bpicode/fritzctl/fritz"
+	"github.com/gotohr/fritzctl/fritz"
 )
 
 // Interact with Home Automation API.

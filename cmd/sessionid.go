@@ -3,9 +3,9 @@ package cmd
 import (
 	"os"
 
-	"github.com/bpicode/fritzctl/fritz"
-	"github.com/bpicode/fritzctl/internal/console"
-	"github.com/bpicode/fritzctl/logger"
+	"github.com/gotohr/fritzctl/fritz"
+	"github.com/gotohr/fritzctl/internal/console"
+	"github.com/gotohr/fritzctl/logger"
 	"github.com/spf13/cobra"
 )
 

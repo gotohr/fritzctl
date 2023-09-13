@@ -3,7 +3,7 @@ package manifest
 import (
 	"strconv"
 
-	"github.com/bpicode/fritzctl/fritz"
+	"github.com/gotohr/fritzctl/fritz"
 )
 
 // ConvertDevicelist converts a fritz.Devicelist to a Plan.

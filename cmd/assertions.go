@@ -3,7 +3,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/bpicode/fritzctl/internal/errors"
+	"github.com/gotohr/fritzctl/internal/errors"
 )
 
 func assertNoErr(err error, format string, args ...interface{}) {

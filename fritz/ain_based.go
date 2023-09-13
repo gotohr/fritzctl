@@ -3,7 +3,7 @@ package fritz
 import (
 	"fmt"
 
-	"github.com/bpicode/fritzctl/httpread"
+	"github.com/gotohr/fritzctl/httpread"
 )
 
 // ainBased API definition, guided by

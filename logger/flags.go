@@ -1,7 +1,7 @@
 package logger
 
 import (
-	"github.com/bpicode/fritzctl/internal/errors"
+	"github.com/gotohr/fritzctl/internal/errors"
 )
 
 // Level represents a Value for different logging configs.

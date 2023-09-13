@@ -3,7 +3,7 @@ package logger_test
 import (
 	"flag"
 
-	"github.com/bpicode/fritzctl/logger"
+	"github.com/gotohr/fritzctl/logger"
 )
 
 // Logging can be turned off manually.

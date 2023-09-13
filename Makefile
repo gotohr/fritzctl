@@ -10,7 +10,7 @@ FRITZCTL_REVISION         := $(shell git rev-parse HEAD)
 BASH_COMPLETION_OUTPUT    ?= "os/completion/fritzctl"
 MAN_PAGE_OUTPUT           ?= "os/man/fritzctl.1"
 COPYRIGHT_OUTPUT          ?= "os/doc/copyright"
-BUILDFLAGS                := -ldflags="-s -w -X github.com/bpicode/fritzctl/config.Version=$(FRITZCTL_VERSION) -X github.com/bpicode/fritzctl/config.Revision=$(FRITZCTL_REVISION)" -gcflags="-trimpath=$(GOPATH)" -asmflags="-trimpath=$(GOPATH)"
+BUILDFLAGS                := -ldflags="-s -w -X github.com/gotohr/fritzctl/config.Version=$(FRITZCTL_VERSION) -X github.com/gotohr/fritzctl/config.Revision=$(FRITZCTL_REVISION)" -gcflags="-trimpath=$(GOPATH)" -asmflags="-trimpath=$(GOPATH)"
 TESTFLAGS                 ?=
 
 all: sysinfo depverify build install test codequality completion_bash man copyright
@@ -100,19 +100,19 @@ man:
 
 analice:
 	@echo -n ">> ANALICE"
-	@$(GO) build github.com/bpicode/fritzctl/tools/analice
+	@$(GO) build github.com/gotohr/fritzctl/tools/analice
 	@$(call ok)
 
 license_compliance: analice
 	@echo -n ">> OSS LICENSE COMPLIANCE"
-	@$(GO) run github.com/bpicode/fritzctl/tools/analice generate notice $(PKGS) --tests=true --gooses=linux,windows,darwin > NOTICE.tmp
+	@$(GO) run github.com/gotohr/fritzctl/tools/analice generate notice $(PKGS) --tests=true --gooses=linux,windows,darwin > NOTICE.tmp
 	@diff NOTICE NOTICE.tmp || exit 1
 	@rm NOTICE.tmp
 	@$(call ok)
 
 copyright: license_compliance
 	@echo -n ">> COPYRIGHT, output = $(COPYRIGHT_OUTPUT)"
-	@$(GO) run github.com/bpicode/fritzctl/tools/analice generate copyright github.com/bpicode/fritzctl --tests=false --gooses=linux,windows,darwin > $(COPYRIGHT_OUTPUT)
+	@$(GO) run github.com/gotohr/fritzctl/tools/analice generate copyright github.com/gotohr/fritzctl --tests=false --gooses=linux,windows,darwin > $(COPYRIGHT_OUTPUT)
 	@$(call ok)
 
 codequality:
@@ -241,7 +241,7 @@ pkg_linux: dist_linux man completion_bash copyright
 	@$(call mkpkg, arm, build/distributions/linux_arm/, build/distributions/, rpm)
 
 define mkpkg
-	fpm -f -t $4 -n fritzctl -a $1 -v $(FRITZCTL_VERSION) --log warn --description 'AVM FRITZ!Box client' -m bpicode --vendor bpicode --url https://github.com/bpicode/fritzctl --license MIT --category utils --provides fritzctl --deb-no-default-config-files --config-files etc/fritzctl/config.yml --config-files etc/fritzctl/fritz.pem -p $3 -C $2 -s dir .
+	fpm -f -t $4 -n fritzctl -a $1 -v $(FRITZCTL_VERSION) --log warn --description 'AVM FRITZ!Box client' -m gotohr --vendor gotohr --url https://github.com/gotohr/fritzctl --license MIT --category utils --provides fritzctl --deb-no-default-config-files --config-files etc/fritzctl/config.yml --config-files etc/fritzctl/fritz.pem -p $3 -C $2 -s dir .
 endef
 
 sign_deb:
@@ -258,35 +258,35 @@ publish_deb:
 
 	@$(eval AMD64DEB:=$(shell ls ./build/distributions/fritzctl_*_amd64.deb | xargs -n 1 basename))
 	@echo "     UPLOAD -> BINTRAY, $(AMD64DEB)"
-	@curl -f -T ./build/distributions/$(AMD64DEB) -ubpicode:$(BINTRAY_API_KEY) -H "X-GPG-PASSPHRASE:$(BINTRAY_SIGN_GPG_PASSPHRASE)" "https://api.bintray.com/content/bpicode/fritzctl_deb/fritzctl/$(FRITZCTL_VERSION)/pool/main/m/fritzctl/$(AMD64DEB);deb_distribution=wheezy,jessie,stretch,buster,sid;deb_component=main;deb_architecture=amd64;publish=1"
+	@curl -f -T ./build/distributions/$(AMD64DEB) -ugotohr:$(BINTRAY_API_KEY) -H "X-GPG-PASSPHRASE:$(BINTRAY_SIGN_GPG_PASSPHRASE)" "https://api.bintray.com/content/gotohr/fritzctl_deb/fritzctl/$(FRITZCTL_VERSION)/pool/main/m/fritzctl/$(AMD64DEB);deb_distribution=wheezy,jessie,stretch,buster,sid;deb_component=main;deb_architecture=amd64;publish=1"
 
 	@$(eval ARMDEB:=$(shell ls ./build/distributions/fritzctl_*_armhf.deb | xargs -n 1 basename))
 	@echo "     UPLOAD -> BINTRAY, $(AMD64DEB)"
-	@curl -f -T ./build/distributions/$(ARMDEB)   -ubpicode:$(BINTRAY_API_KEY) -H "X-GPG-PASSPHRASE:$(BINTRAY_SIGN_GPG_PASSPHRASE)" "https://api.bintray.com/content/bpicode/fritzctl_deb/fritzctl/$(FRITZCTL_VERSION)/pool/main/m/fritzctl/$(ARMDEB);deb_distribution=wheezy,jessie,stretch,buster,sid;deb_component=main;deb_architecture=armhf;publish=1"
+	@curl -f -T ./build/distributions/$(ARMDEB)   -ugotohr:$(BINTRAY_API_KEY) -H "X-GPG-PASSPHRASE:$(BINTRAY_SIGN_GPG_PASSPHRASE)" "https://api.bintray.com/content/gotohr/fritzctl_deb/fritzctl/$(FRITZCTL_VERSION)/pool/main/m/fritzctl/$(ARMDEB);deb_distribution=wheezy,jessie,stretch,buster,sid;deb_component=main;deb_architecture=armhf;publish=1"
 
 	@echo "     CALCULATE METADATA, deb repository"
-	@curl -f -X POST -H "X-GPG-PASSPHRASE:$(BINTRAY_SIGN_GPG_PASSPHRASE)" -ubpicode:$(BINTRAY_API_KEY) https://api.bintray.com/calc_metadata/bpicode/fritzctl_deb
+	@curl -f -X POST -H "X-GPG-PASSPHRASE:$(BINTRAY_SIGN_GPG_PASSPHRASE)" -ugotohr:$(BINTRAY_API_KEY) https://api.bintray.com/calc_metadata/gotohr/fritzctl_deb
 
 publish_rpm:
 	@echo ">> PUBLISH, rpm packages"
 
 	@$(eval AMD64RPM:=$(shell ls ./build/distributions/fritzctl-*.x86_64.rpm | xargs -n 1 basename))
 	@echo "     UPLOAD -> BINTRAY, $(AMD64RPM)"
-	@curl -f -T ./build/distributions/$(AMD64RPM) -ubpicode:$(BINTRAY_API_KEY) -H "X-GPG-PASSPHRASE:$(BINTRAY_SIGN_GPG_PASSPHRASE)" "https://api.bintray.com/content/bpicode/fritzctl_rpm/fritzctl/$(FRITZCTL_VERSION)/$(AMD64RPM);publish=1"
+	@curl -f -T ./build/distributions/$(AMD64RPM) -ugotohr:$(BINTRAY_API_KEY) -H "X-GPG-PASSPHRASE:$(BINTRAY_SIGN_GPG_PASSPHRASE)" "https://api.bintray.com/content/gotohr/fritzctl_rpm/fritzctl/$(FRITZCTL_VERSION)/$(AMD64RPM);publish=1"
 
 	@$(eval ARMRPM:=$(shell ls ./build/distributions/fritzctl-*.arm.rpm | xargs -n 1 basename))
 	@echo "     UPLOAD -> BINTRAY, $(ARMRPM)"
-	@curl -f -T ./build/distributions/$(ARMRPM) -ubpicode:$(BINTRAY_API_KEY)  -H "X-GPG-PASSPHRASE:$(BINTRAY_SIGN_GPG_PASSPHRASE)" "https://api.bintray.com/content/bpicode/fritzctl_rpm/fritzctl/$(FRITZCTL_VERSION)/$(ARMRPM);publish=1"
+	@curl -f -T ./build/distributions/$(ARMRPM) -ugotohr:$(BINTRAY_API_KEY)  -H "X-GPG-PASSPHRASE:$(BINTRAY_SIGN_GPG_PASSPHRASE)" "https://api.bintray.com/content/gotohr/fritzctl_rpm/fritzctl/$(FRITZCTL_VERSION)/$(ARMRPM);publish=1"
 
 	@echo "     CALCULATE METADATA, rpm repository"
-	@curl -f -X POST -H "X-GPG-PASSPHRASE:$(BINTRAY_SIGN_GPG_PASSPHRASE)" -ubpicode:$(BINTRAY_API_KEY) https://api.bintray.com/calc_metadata/bpicode/fritzctl_rpm
+	@curl -f -X POST -H "X-GPG-PASSPHRASE:$(BINTRAY_SIGN_GPG_PASSPHRASE)" -ugotohr:$(BINTRAY_API_KEY) https://api.bintray.com/calc_metadata/gotohr/fritzctl_rpm
 
 publish_win:
 	@echo ">> PUBLISH, windows packages"
 
 	@$(eval WINZIP:=$(shell ls ./build/distributions/fritzctl-*-windows-amd64.zip | xargs -n 1 basename))
 	@echo "     UPLOAD -> BINTRAY, $(WINZIP)"
-	@curl -f -T ./build/distributions/$(WINZIP) -ubpicode:$(BINTRAY_API_KEY) -H "X-GPG-PASSPHRASE:$(BINTRAY_SIGN_GPG_PASSPHRASE)" "https://api.bintray.com/content/bpicode/fritzctl_win/fritzctl/$(FRITZCTL_VERSION)/$(WINZIP);publish=1"
+	@curl -f -T ./build/distributions/$(WINZIP) -ugotohr:$(BINTRAY_API_KEY) -H "X-GPG-PASSPHRASE:$(BINTRAY_SIGN_GPG_PASSPHRASE)" "https://api.bintray.com/content/gotohr/fritzctl_win/fritzctl/$(FRITZCTL_VERSION)/$(WINZIP);publish=1"
 
 demogif:
 	@echo ">> DEMO GIF"
@@ -300,5 +300,5 @@ demogif:
 release_github: pkg_all dist_all
 	@echo ">> GITHUB RELEASE"
 	@$(eval ASSETS:=$(shell find build/ -maxdepth 2 -type f -printf '-a %p\n'))
-	@git remote set-url origin https://github.com/bpicode/fritzctl.git
+	@git remote set-url origin https://github.com/gotohr/fritzctl.git
 	@hub release create --draft v$(FRITZCTL_VERSION) --message="fritzctl $(FRITZCTL_VERSION)" $(ASSETS)

@@ -6,8 +6,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/bpicode/fritzctl/config"
-	"github.com/bpicode/fritzctl/mock"
+	"github.com/gotohr/fritzctl/config"
+	"github.com/gotohr/fritzctl/mock"
 	"github.com/spf13/cobra"
 	"github.com/stretchr/testify/assert"
 )

@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/bpicode/fritzctl/fritz"
+	"github.com/gotohr/fritzctl/fritz"
 )
 
 // Mapper maps the XML to JSON model.

@@ -10,7 +10,7 @@ func TestAnalyze(t *testing.T) {
 	pkgs, _ := xPackagesScanner{}.scan(depScannerOptions{
 		envPermutations: [][]string{nil},
 		tests:           false,
-	}, "github.com/bpicode/fritzctl")
+	}, "github.com/gotohr/fritzctl")
 	withLicenseFiles, _ := licenceFileResolver{}.resolve(pkgs...)
 
 	licPkgs, errs := licenseFileAnalizer{}.analyze(withLicenseFiles...)
