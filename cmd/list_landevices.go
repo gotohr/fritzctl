@@ -1,6 +1,8 @@
 package cmd
 
 import (
+	"encoding/json"
+	"fmt"
 	"os"
 	"strings"
 
@@ -15,12 +17,13 @@ var listLanDevicesCmd = &cobra.Command{
 	Short: "List the available LAN devices",
 	Long:  "List the available LAN devices along with several information like IP addresses, MAC addresses, etc.",
 	Example: `fritzctl list landevices
-fritzctl list landevices --filters=active,online`,
+fritzctl list landevices --filters=active,online --output=default,json`,
 	RunE: listLanDevices,
 }
 
 func init() {
 	listLanDevicesCmd.Flags().StringP("filters", "", "", "filter device list")
+	listLanDevicesCmd.Flags().StringP("output", "o", "", "specify output format")
 	listCmd.AddCommand(listLanDevicesCmd)
 }
 
@@ -30,11 +33,16 @@ func listLanDevices(cmd *cobra.Command, _ []string) error {
 	devs, err := f.ListLanDevices()
 	assertNoErr(err, "cannot obtain LAN devices data")
 	devs = applyLanDevicesFilters(cmd.Flag("filters").Value.String(), *devs)
-	logger.Success("Obtained LAN devices data:")
+	if cmd.Flag("output").Value.String() == "json" {
+		body, _ := json.Marshal(devs)
+		fmt.Print(string(body))
+	} else {
+		logger.Success("Obtained LAN devices data:")
 
-	table := lanDevicesTable()
-	appendData(table, *devs)
-	table.Print(os.Stdout)
+		table := lanDevicesTable()
+		appendData(table, *devs)
+		table.Print(os.Stdout)
+	}
 	return nil
 }
 
